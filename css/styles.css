@@ -23,6 +23,8 @@
   --form-border-color: rgba(255, 255, 255, 0.3);
   --form-border-shadow: rgba(0, 0, 0, 0.15);
   --form-border-active: rgba(33, 150, 243, 0);
+  --form-border-modal: rgba(33, 33, 33, 0.2);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
 }
 
 /* ----- Утилиты ----- */
@@ -272,8 +274,11 @@ img {
 }
 
 .order:hover,
-.order:focus {
+.order:focus,
+.submit-btn:hover,
+.submit-btn:focus {
   background-color: var(--accent-order-color);
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Наши преимущества */
@@ -614,12 +619,8 @@ img {
   fill: var(--main-bg-color);
 }
 
-.submit-btn {
+.page-footer .submit-btn {
   padding: 10px 28px 10px 29px;
-}
-
-.textarea {
-  resize: none;
 }
 
 .page-footer .input-field {
@@ -631,6 +632,7 @@ img {
   box-shadow: 0px 4px 4px 0px var(--form-border-shadow);
 }
 
+.page-footer .input-field,
 .page-footer .input-field::placeholder {
   font-style: normal;
   font-size: 16px;
@@ -639,12 +641,12 @@ img {
   color: var(--footer-link-color);
 }
 
-.form {
+.page-footer .form {
   display: flex;
   align-items: flex-end;
 }
 
-.form-box {
+.page-footer .form-box {
   display: flex;
   flex-wrap: wrap;
   width: min-content;
@@ -706,6 +708,120 @@ img {
   border: 1px solid var(--modal-btn-border);
   border-radius: 50%;
   background-color: var(--main-bg-color);
+}
+
+.modal .form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.modal .form-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.modal .input-form {
+  border: 1px solid var(--form-border-modal);
+  border-radius: 4px;
+  padding: 10px 0 10px 11px;
+}
+
+.modal .input-form:focus,
+.comment-field:focus {
+  outline: 1px solid var(--accent-color);
+}
+
+.comment-field {
+  resize: none;
+  border: 1px solid var(--form-border-modal);
+  border-radius: 4px;
+}
+
+.comment-field::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+}
+
+.modal .submit-btn {
+  padding: 10px 55px 10px 56px;
+}
+
+.modal .label-form {
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--main-text-color);
+}
+
+.form-text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--second-text-color);
+  margin-bottom: 12px;
+}
+
+.checkbox-label,
+.checkbox-link {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.checkbox-link {
+  margin-bottom: 30px;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.checkbox-label {
+  color: var(--main-text-color);
+}
+
+.checkbox-label::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--second-text-color);
+  border-radius: 2px;
+  margin-right: 9px;
+}
+
+.checkbox:checked ~ .checkbox-label::after {
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.form-comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.comment-field {
+  padding: 11px 15px;
+}
+
+.form-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--placeholder-color);
+  margin-bottom: 30px;
+}
+
+.checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* ----- Страница "Портфолио" ----- */
