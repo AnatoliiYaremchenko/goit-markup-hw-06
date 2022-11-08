@@ -465,6 +465,9 @@
             />
           </div>
           <button type="submit" class="submit-btn">Подписаться</button>
+          <svg class="submit-icon">
+            <use href="./images/icons.svg#icon-telegram"></use>
+          </svg>
         </form>
       </div>
     </footer>
@@ -481,6 +484,9 @@
               id="username"
               class="input-form"
             />
+            <svg class="username-icon">
+              <use href="./images/icons.svg#icon-username"></use>
+            </svg>
           </div>
           <div class="form-box">
             <label for="phone-number" class="label-form">Телефон</label>
@@ -490,10 +496,16 @@
               id="phone-number"
               class="input-form"
             />
+            <svg class="phone-icon">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
           </div>
           <div class="form-box">
             <label for="email" class="label-form">Почта</label>
             <input type="email" name="email" id="email" class="input-form" />
+            <svg class="email-icon">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
           </div>
           <div class="form-comment">
             <label for="comment" class="label-form">Комментарий</label>
@@ -505,18 +517,21 @@
               class="comment-field"
             ></textarea>
           </div>
-          <div class="form-checkbox">
+          <label for="agreement" class="checkbox-label">
             <input
               type="checkbox"
               name="agreement"
               id="agreement"
               class="checkbox"
             />
-            <label for="agreement" class="checkbox-label"
+            <svg class="checkbox-icon">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg>
+            <span class="checkbox-text"
               >Соглашаюсь с рассылкой и принимаю
-              <a href="" class="checkbox-link">Условия договора</a></label
-            >
-          </div>
+              <a href="" class="checkbox-link">Условия договора</a>
+            </span>
+          </label>
           <button type="submit" class="submit-btn">Отправить</button>
         </form>
         <button type="button" class="modal-batton" data-modal-close>
@@ -527,7 +542,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
-    <script>
+    <!--     <script>
       (() => {
         document
           .querySelector(".js-speaker-form")
@@ -539,6 +554,6 @@
             );
           });
       })();
-    </script>
+    </script> -->
   </body>
 </html>
