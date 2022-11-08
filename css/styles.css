@@ -692,8 +692,9 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  min-width: 528px;
-  min-height: 581px;
+  /*   min-width: 528px;
+  min-height: 581px; */
+  width: auto;
 
   background-color: var(--main-bg-color);
 
@@ -796,6 +797,7 @@ img {
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  /* left: 0px; */
 }
 
 .checkbox-icon {
@@ -839,7 +841,7 @@ img {
 }
 
 .username-icon,
-.phone-icon,
+.tel-icon,
 .email-icon {
   width: 18px;
   height: 18px;
@@ -851,7 +853,7 @@ img {
 }
 
 .input-form:focus + .username-icon,
-.input-form:focus + .phone-icon,
+.input-form:focus + .tel-icon,
 .input-form:focus + .email-icon {
   fill: var(--accent-color);
   stroke: var(--accent-color);
