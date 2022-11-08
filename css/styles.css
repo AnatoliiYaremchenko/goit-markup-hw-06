@@ -784,7 +784,7 @@ img {
   color: var(--main-text-color);
 }
 
-.checkbox-label::after {
+.checkbox-label::before {
   content: "";
   display: inline-block;
   width: 16px;
@@ -794,9 +794,18 @@ img {
   margin-right: 9px;
 }
 
-.checkbox:checked ~ .checkbox-label::after {
+.checkbox:checked + .checkbox-label::before {
   background-color: var(--accent-color);
-  border: none;
+  border-color: var(--accent-color);
+  background-origin: border-box;
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  margin-right: 9px;
+  background-image: url("./images/icons.svg#icon-check");
+  background-size: contain;
 }
 
 .form-comment {
